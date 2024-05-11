@@ -1,0 +1,91 @@
+1. Write a solution to find the ids of products that are both low fat and recyclable.
+product_id	low_fats	recycle
+0	Y	N
+1	Y	Y
+2	N	Y
+3	Y	Y
+4	N	N
+
+2. Write a python function to find the average of odd numbers till a given number.
+For example:
+	Given number:8
+	List:[1,3,5,7]
+	Average:4
+
+3. Write a python function to calculate Euclidean Distance and Minkowski Distance.
+Ans:
+import numpy as np
+
+a=[5,8,6,4,7,2]
+b=[1,4,3,1,6,0]
+
+def minkowski(a:list, b:list, r):
+
+4. Write decdion tree and random seed = 2
+Ans:
+from sklearn.tree import Decision TreeClassifier
+
+5. Write information gain function
+Ans:
+
+label=['1','1','1','0','0','0','0','0','0','0']
+label_left=['0','0','0']
+label_right=['1','1','1','0','0','0','0']
+
+def get_probability(x:list):
+	dict={}
+	for value in set(x):#set(x) will get the unique item
+		probability=x.count(value)/len(x)
+		entropy=round(-1 * probability * math.log(probability, 2), 4)
+		dict[value]=entropy
+	return dict
+	
+def information_gain(x: list, x_left: list, x_right: list):
+	#calculate entropy of x(before spilit)
+	entropy_before_spilit = 
+	
+	#calculate entropy of x_left, x_right
+	entropy_after_spilit_left = 
+	entropy_after_spilit_right = 
+	
+	#calculate entropy of after spilit
+	entropy_after_spilit = 
+	
+	#calculate information of gain
+	information_gain = 
+	
+	return information_gain
+	
+6. Mutual Information
+Ans:
+
+import math
+form collections form Counter
+
+#算x, y, (x,y)的entropy
+def get_probability(x:list):
+	dict={}
+	for value in set(x):#set(x) will get the unique item
+		probability=x.count(value)/len(x)
+		entropy=round(-1 * probability * math.log(probability, 2), 4))
+		dict[value]=entropy
+	return dict
+
+def mutual_information(x: list, y: list):
+	entropy_x = 
+	entropy_y = 
+	entropy_x_y = get_probability(list(zip(x,y)))
+	entropy_x_sum = 
+	entropy_y_sum = 
+	entropy_x_y_sum = 
+	
+	total_sum = 
+	
+	print('mutual information')
+	print(f'entropy_x: {entropy_x},entropy_y: {entropy_y}, entropy_x_y: {entropy_x_y}')
+	print(f'entropy_x_sum: {entropy_x_sum},entropy_y_sum: {entropy_y_sum}, entropy_x_y_sum: {entropy_x_y_sum}')
+	print(f'entropy_x_sum({entropy_x_sum})+entropy_y_sum({entropy_y_sum})-entropy_x_y_sum({entropy_x_y_sum})')
+	return(total_sum)
+	
+x=['S','B'.'S','B','B','S','B','S','B','B']
+y=['Black','Red','Yellow','Red','Yellow','Black','Black','Yellow','Yellow','Red']
